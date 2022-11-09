@@ -1,5 +1,6 @@
 //include pre-processor directives
 #include <iostream>
+#include <iomanip>
 
 #define NUM 34568.80
 
@@ -13,6 +14,11 @@ void decisions1(void){
     // initialize it using constant defined in header file
     float num = NUM;
 
+    //show decimal point and trailing zeros on the output stream object
+    cout << fixed << showpoint; 
+    //show three digits to the right of the decimal on the output stream object
+    cout << setprecision(3);
+
     // use if statement
     if (num<40000.0){
         cout<<"Num "<<num<<" is less than 400000.0"<< endl; //displayed
@@ -23,7 +29,7 @@ void decisions1(void){
     if (num<40000.0){
         cout<<"Num "<<num<< " is less than 400000.0"<<endl;//not displayed
     }else{
-        cout<<"Num"<<num<< "is not less than 400000.0"<<endl;//displayed
+        cout<<"Num"<<num<< " is not less than 400000.0"<<endl;//displayed
     }
 
     num = 0.0;
